@@ -4,11 +4,13 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Navbar */
 .navbar-brand {
   font-weight: bold;
   font-size: 1.3rem;
 }
 
+/* Hero Section */
 .hero {
   background: linear-gradient(135deg, #007bff, #6c63ff);
   color: white;
@@ -51,6 +53,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: azure;
+  margin: 0 auto;
 }
 
 .skill-circle i {
@@ -67,6 +70,9 @@ body {
   border: none;
   border-radius: 15px;
   cursor: pointer;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card:hover {
@@ -79,6 +85,11 @@ body {
   object-fit: cover;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+  width: 100%;
+}
+
+.project-card .card-body {
+  flex-grow: 1;
 }
 
 /* Contact */
@@ -91,7 +102,47 @@ body {
   text-decoration: underline;
 }
 
+/* Footer */
 footer {
   background-color: #212529;
   color: white;
+  padding: 10px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .hero img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .skill-circle {
+    width: 140px;
+    height: 140px;
+  }
+
+  .skill-circle i {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 60px 0;
+    text-align: center;
+  }
+
+  .hero img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .skill-circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .skill-circle i {
+    font-size: 60px;
+  }
 }
